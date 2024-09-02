@@ -32,10 +32,10 @@ public class Player : MonoBehaviour
     void Update()
     {
        Debug.Log("update");
-       float h = Input.GetAxis("Horizontal");
-       float v = Input.GetAxis("Vertical");
+       float x = Input.GetAxis("Horizontal");
+       float y = Input.GetAxis("Vertical");
 
-       Vector3 direcao = new Vector3(h, 0,v);
+       Vector3 direcao = new Vector3(x, 0,y);
        rb.AddForce(direcao * (velocidade * Time.deltaTime), ForceMode.Impulse);
        if (Input.GetKeyDown(KeyCode.Space) && noChao == true) //PULO
        {
